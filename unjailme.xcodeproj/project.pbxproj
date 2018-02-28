@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DBCF96E2046CFF4001A233B /* lorgnette.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF96C2046CFF4001A233B /* lorgnette.c */; };
+		1DBCF9712046DE48001A233B /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCF9702046DE47001A233B /* APIManager.m */; };
+		1DF1DA462045FAFE006ECC35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA452045FAFE006ECC35 /* AppDelegate.m */; };
+		1DF1DA492045FAFE006ECC35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA482045FAFE006ECC35 /* ViewController.m */; };
+		1DF1DA4C2045FAFE006ECC35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF1DA4A2045FAFE006ECC35 /* Main.storyboard */; };
+		1DF1DA4F2045FAFE006ECC35 /* unjailme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA4D2045FAFE006ECC35 /* unjailme.xcdatamodeld */; };
+		1DF1DA512045FAFE006ECC35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF1DA502045FAFE006ECC35 /* Assets.xcassets */; };
+		1DF1DA542045FAFE006ECC35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF1DA522045FAFE006ECC35 /* LaunchScreen.storyboard */; };
+		1DF1DA572045FAFE006ECC35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA562045FAFE006ECC35 /* main.m */; };
+		1DF1DA612045FAFE006ECC35 /* unjailmeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA602045FAFE006ECC35 /* unjailmeTests.m */; };
+		1DF1DA6C2045FAFE006ECC35 /* unjailmeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA6B2045FAFE006ECC35 /* unjailmeUITests.m */; };
+		1DF1DA7B2045FB83006ECC35 /* exploit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA792045FB83006ECC35 /* exploit.m */; };
+		1DF1DA7E2045FCF6006ECC35 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA7D2045FCF6006ECC35 /* QuartzCore.framework */; };
+		1DF1DA8520460A34006ECC35 /* libmtftp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA8420460A34006ECC35 /* libmtftp.dylib */; };
+		1DF1DA8720460B1C006ECC35 /* mtftp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA8620460B1C006ECC35 /* mtftp.m */; };
+		1DF1DA8920460B97006ECC35 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA8820460B97006ECC35 /* libiconv.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DF1DA5D2045FAFE006ECC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF1DA392045FAFE006ECC35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF1DA402045FAFE006ECC35;
+			remoteInfo = unjailme;
+		};
+		1DF1DA682045FAFE006ECC35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF1DA392045FAFE006ECC35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF1DA402045FAFE006ECC35;
+			remoteInfo = unjailme;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DBCF96B2046CFD7001A233B /* lorgnette-structs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lorgnette-structs.h"; sourceTree = "<group>"; };
+		1DBCF96C2046CFF4001A233B /* lorgnette.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lorgnette.c; sourceTree = "<group>"; };
+		1DBCF96D2046CFF4001A233B /* lorgnette.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lorgnette.h; sourceTree = "<group>"; };
+		1DBCF96F2046DE47001A233B /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		1DBCF9702046DE47001A233B /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		1DF1DA412045FAFE006ECC35 /* unjailme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unjailme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF1DA442045FAFE006ECC35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1DF1DA452045FAFE006ECC35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1DF1DA472045FAFE006ECC35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1DF1DA482045FAFE006ECC35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1DF1DA4B2045FAFE006ECC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DF1DA4E2045FAFE006ECC35 /* unjailme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = unjailme.xcdatamodel; sourceTree = "<group>"; };
+		1DF1DA502045FAFE006ECC35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DF1DA532045FAFE006ECC35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DF1DA552045FAFE006ECC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF1DA562045FAFE006ECC35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1DF1DA5C2045FAFE006ECC35 /* unjailmeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unjailmeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF1DA602045FAFE006ECC35 /* unjailmeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unjailmeTests.m; sourceTree = "<group>"; };
+		1DF1DA622045FAFE006ECC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF1DA672045FAFE006ECC35 /* unjailmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unjailmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF1DA6B2045FAFE006ECC35 /* unjailmeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = unjailmeUITests.m; sourceTree = "<group>"; };
+		1DF1DA6D2045FAFE006ECC35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF1DA792045FB83006ECC35 /* exploit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = exploit.m; sourceTree = "<group>"; };
+		1DF1DA7A2045FB83006ECC35 /* exploit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = exploit.h; sourceTree = "<group>"; };
+		1DF1DA7D2045FCF6006ECC35 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1DF1DA8220460A08006ECC35 /* pureftpd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pureftpd.h; sourceTree = "<group>"; };
+		1DF1DA8320460A23006ECC35 /* mtftp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mtftp.h; sourceTree = "<group>"; };
+		1DF1DA8420460A34006ECC35 /* libmtftp.dylib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtftp.dylib; sourceTree = "<group>"; };
+		1DF1DA8620460B1C006ECC35 /* mtftp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtftp.m; sourceTree = "<group>"; };
+		1DF1DA8820460B97006ECC35 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DF1DA3E2045FAFE006ECC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF1DA8920460B97006ECC35 /* libiconv.tbd in Frameworks */,
+				1DF1DA8520460A34006ECC35 /* libmtftp.dylib in Frameworks */,
+				1DF1DA7E2045FCF6006ECC35 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA592045FAFE006ECC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA642045FAFE006ECC35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DBCF9722046DE4B001A233B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA8320460A23006ECC35 /* mtftp.h */,
+				1DF1DA8620460B1C006ECC35 /* mtftp.m */,
+				1DF1DA8220460A08006ECC35 /* pureftpd.h */,
+				1DBCF96B2046CFD7001A233B /* lorgnette-structs.h */,
+				1DBCF96C2046CFF4001A233B /* lorgnette.c */,
+				1DBCF96D2046CFF4001A233B /* lorgnette.h */,
+				1DBCF96F2046DE47001A233B /* APIManager.h */,
+				1DBCF9702046DE47001A233B /* APIManager.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		1DF1DA382045FAFE006ECC35 = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA432045FAFE006ECC35 /* unjailme */,
+				1DF1DA5F2045FAFE006ECC35 /* unjailmeTests */,
+				1DF1DA6A2045FAFE006ECC35 /* unjailmeUITests */,
+				1DF1DA422045FAFE006ECC35 /* Products */,
+				1DF1DA7C2045FCF6006ECC35 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DF1DA422045FAFE006ECC35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA412045FAFE006ECC35 /* unjailme.app */,
+				1DF1DA5C2045FAFE006ECC35 /* unjailmeTests.xctest */,
+				1DF1DA672045FAFE006ECC35 /* unjailmeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DF1DA432045FAFE006ECC35 /* unjailme */ = {
+			isa = PBXGroup;
+			children = (
+				1DBCF9722046DE4B001A233B /* utils */,
+				1DF1DA442045FAFE006ECC35 /* AppDelegate.h */,
+				1DF1DA452045FAFE006ECC35 /* AppDelegate.m */,
+				1DF1DA472045FAFE006ECC35 /* ViewController.h */,
+				1DF1DA482045FAFE006ECC35 /* ViewController.m */,
+				1DF1DA792045FB83006ECC35 /* exploit.m */,
+				1DF1DA7A2045FB83006ECC35 /* exploit.h */,
+				1DF1DA4A2045FAFE006ECC35 /* Main.storyboard */,
+				1DF1DA502045FAFE006ECC35 /* Assets.xcassets */,
+				1DF1DA522045FAFE006ECC35 /* LaunchScreen.storyboard */,
+				1DF1DA552045FAFE006ECC35 /* Info.plist */,
+				1DF1DA562045FAFE006ECC35 /* main.m */,
+				1DF1DA4D2045FAFE006ECC35 /* unjailme.xcdatamodeld */,
+			);
+			path = unjailme;
+			sourceTree = "<group>";
+		};
+		1DF1DA5F2045FAFE006ECC35 /* unjailmeTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA602045FAFE006ECC35 /* unjailmeTests.m */,
+				1DF1DA622045FAFE006ECC35 /* Info.plist */,
+			);
+			path = unjailmeTests;
+			sourceTree = "<group>";
+		};
+		1DF1DA6A2045FAFE006ECC35 /* unjailmeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA6B2045FAFE006ECC35 /* unjailmeUITests.m */,
+				1DF1DA6D2045FAFE006ECC35 /* Info.plist */,
+			);
+			path = unjailmeUITests;
+			sourceTree = "<group>";
+		};
+		1DF1DA7C2045FCF6006ECC35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF1DA8820460B97006ECC35 /* libiconv.tbd */,
+				1DF1DA8420460A34006ECC35 /* libmtftp.dylib */,
+				1DF1DA7D2045FCF6006ECC35 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DF1DA402045FAFE006ECC35 /* unjailme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF1DA702045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailme" */;
+			buildPhases = (
+				1DF1DA3D2045FAFE006ECC35 /* Sources */,
+				1DF1DA3E2045FAFE006ECC35 /* Frameworks */,
+				1DF1DA3F2045FAFE006ECC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unjailme;
+			productName = unjailme;
+			productReference = 1DF1DA412045FAFE006ECC35 /* unjailme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DF1DA5B2045FAFE006ECC35 /* unjailmeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF1DA732045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailmeTests" */;
+			buildPhases = (
+				1DF1DA582045FAFE006ECC35 /* Sources */,
+				1DF1DA592045FAFE006ECC35 /* Frameworks */,
+				1DF1DA5A2045FAFE006ECC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF1DA5E2045FAFE006ECC35 /* PBXTargetDependency */,
+			);
+			name = unjailmeTests;
+			productName = unjailmeTests;
+			productReference = 1DF1DA5C2045FAFE006ECC35 /* unjailmeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DF1DA662045FAFE006ECC35 /* unjailmeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF1DA762045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailmeUITests" */;
+			buildPhases = (
+				1DF1DA632045FAFE006ECC35 /* Sources */,
+				1DF1DA642045FAFE006ECC35 /* Frameworks */,
+				1DF1DA652045FAFE006ECC35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF1DA692045FAFE006ECC35 /* PBXTargetDependency */,
+			);
+			name = unjailmeUITests;
+			productName = unjailmeUITests;
+			productReference = 1DF1DA672045FAFE006ECC35 /* unjailmeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DF1DA392045FAFE006ECC35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jailed Inc";
+				TargetAttributes = {
+					1DF1DA402045FAFE006ECC35 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1DF1DA5B2045FAFE006ECC35 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1DF1DA402045FAFE006ECC35;
+					};
+					1DF1DA662045FAFE006ECC35 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1DF1DA402045FAFE006ECC35;
+					};
+				};
+			};
+			buildConfigurationList = 1DF1DA3C2045FAFE006ECC35 /* Build configuration list for PBXProject "unjailme" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DF1DA382045FAFE006ECC35;
+			productRefGroup = 1DF1DA422045FAFE006ECC35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DF1DA402045FAFE006ECC35 /* unjailme */,
+				1DF1DA5B2045FAFE006ECC35 /* unjailmeTests */,
+				1DF1DA662045FAFE006ECC35 /* unjailmeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DF1DA3F2045FAFE006ECC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF1DA542045FAFE006ECC35 /* LaunchScreen.storyboard in Resources */,
+				1DF1DA512045FAFE006ECC35 /* Assets.xcassets in Resources */,
+				1DF1DA4C2045FAFE006ECC35 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA5A2045FAFE006ECC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA652045FAFE006ECC35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DF1DA3D2045FAFE006ECC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF1DA4F2045FAFE006ECC35 /* unjailme.xcdatamodeld in Sources */,
+				1DF1DA492045FAFE006ECC35 /* ViewController.m in Sources */,
+				1DF1DA572045FAFE006ECC35 /* main.m in Sources */,
+				1DBCF96E2046CFF4001A233B /* lorgnette.c in Sources */,
+				1DBCF9712046DE48001A233B /* APIManager.m in Sources */,
+				1DF1DA8720460B1C006ECC35 /* mtftp.m in Sources */,
+				1DF1DA462045FAFE006ECC35 /* AppDelegate.m in Sources */,
+				1DF1DA7B2045FB83006ECC35 /* exploit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA582045FAFE006ECC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF1DA612045FAFE006ECC35 /* unjailmeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF1DA632045FAFE006ECC35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF1DA6C2045FAFE006ECC35 /* unjailmeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DF1DA5E2045FAFE006ECC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF1DA402045FAFE006ECC35 /* unjailme */;
+			targetProxy = 1DF1DA5D2045FAFE006ECC35 /* PBXContainerItemProxy */;
+		};
+		1DF1DA692045FAFE006ECC35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF1DA402045FAFE006ECC35 /* unjailme */;
+			targetProxy = 1DF1DA682045FAFE006ECC35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DF1DA4A2045FAFE006ECC35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF1DA4B2045FAFE006ECC35 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DF1DA522045FAFE006ECC35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF1DA532045FAFE006ECC35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DF1DA6E2045FAFE006ECC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DF1DA6F2045FAFE006ECC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DF1DA712045FAFE006ECC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = unjailme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1DF1DA722045FAFE006ECC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = unjailme/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1DF1DA742045FAFE006ECC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				INFOPLIST_FILE = unjailmeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unjailme.app/unjailme";
+			};
+			name = Debug;
+		};
+		1DF1DA752045FAFE006ECC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				INFOPLIST_FILE = unjailmeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/unjailme.app/unjailme";
+			};
+			name = Release;
+		};
+		1DF1DA772045FAFE006ECC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				INFOPLIST_FILE = unjailmeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = unjailme;
+			};
+			name = Debug;
+		};
+		1DF1DA782045FAFE006ECC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 376SZ86J7X;
+				INFOPLIST_FILE = unjailmeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = unjailme;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DF1DA3C2045FAFE006ECC35 /* Build configuration list for PBXProject "unjailme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF1DA6E2045FAFE006ECC35 /* Debug */,
+				1DF1DA6F2045FAFE006ECC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF1DA702045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF1DA712045FAFE006ECC35 /* Debug */,
+				1DF1DA722045FAFE006ECC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF1DA732045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailmeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF1DA742045FAFE006ECC35 /* Debug */,
+				1DF1DA752045FAFE006ECC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF1DA762045FAFE006ECC35 /* Build configuration list for PBXNativeTarget "unjailmeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF1DA772045FAFE006ECC35 /* Debug */,
+				1DF1DA782045FAFE006ECC35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DF1DA4D2045FAFE006ECC35 /* unjailme.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DF1DA4E2045FAFE006ECC35 /* unjailme.xcdatamodel */,
+			);
+			currentVersion = 1DF1DA4E2045FAFE006ECC35 /* unjailme.xcdatamodel */;
+			path = unjailme.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DF1DA392045FAFE006ECC35 /* Project object */;
+}
