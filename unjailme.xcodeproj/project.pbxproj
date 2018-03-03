@@ -20,9 +20,7 @@
 		1DF1DA6C2045FAFE006ECC35 /* unjailmeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA6B2045FAFE006ECC35 /* unjailmeUITests.m */; };
 		1DF1DA7B2045FB83006ECC35 /* exploit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA792045FB83006ECC35 /* exploit.m */; };
 		1DF1DA7E2045FCF6006ECC35 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA7D2045FCF6006ECC35 /* QuartzCore.framework */; };
-		1DF1DA8520460A34006ECC35 /* libmtftp.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA8420460A34006ECC35 /* libmtftp.dylib */; };
-		1DF1DA8720460B1C006ECC35 /* mtftp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF1DA8620460B1C006ECC35 /* mtftp.m */; };
-		1DF1DA8920460B97006ECC35 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF1DA8820460B97006ECC35 /* libiconv.tbd */; };
+		C39426C7204AA82B0068FD73 /* webserver.c in Sources */ = {isa = PBXBuildFile; fileRef = C39426C5204AA82B0068FD73 /* webserver.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +71,8 @@
 		1DF1DA8420460A34006ECC35 /* libmtftp.dylib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtftp.dylib; sourceTree = "<group>"; };
 		1DF1DA8620460B1C006ECC35 /* mtftp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mtftp.m; sourceTree = "<group>"; };
 		1DF1DA8820460B97006ECC35 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		C39426C5204AA82B0068FD73 /* webserver.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = webserver.c; sourceTree = "<group>"; };
+		C39426C6204AA82B0068FD73 /* webserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = webserver.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF1DA8920460B97006ECC35 /* libiconv.tbd in Frameworks */,
-				1DF1DA8520460A34006ECC35 /* libmtftp.dylib in Frameworks */,
 				1DF1DA7E2045FCF6006ECC35 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +153,8 @@
 				1DF1DA552045FAFE006ECC35 /* Info.plist */,
 				1DF1DA562045FAFE006ECC35 /* main.m */,
 				1DF1DA4D2045FAFE006ECC35 /* unjailme.xcdatamodeld */,
+				C39426C5204AA82B0068FD73 /* webserver.c */,
+				C39426C6204AA82B0068FD73 /* webserver.h */,
 			);
 			path = unjailme;
 			sourceTree = "<group>";
@@ -322,10 +322,10 @@
 			files = (
 				1DF1DA4F2045FAFE006ECC35 /* unjailme.xcdatamodeld in Sources */,
 				1DF1DA492045FAFE006ECC35 /* ViewController.m in Sources */,
+				C39426C7204AA82B0068FD73 /* webserver.c in Sources */,
 				1DF1DA572045FAFE006ECC35 /* main.m in Sources */,
 				1DBCF96E2046CFF4001A233B /* lorgnette.c in Sources */,
 				1DBCF9712046DE48001A233B /* APIManager.m in Sources */,
-				1DF1DA8720460B1C006ECC35 /* mtftp.m in Sources */,
 				1DF1DA462045FAFE006ECC35 /* AppDelegate.m in Sources */,
 				1DF1DA7B2045FB83006ECC35 /* exploit.m in Sources */,
 			);
@@ -491,7 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 376SZ86J7X;
+				DEVELOPMENT_TEAM = WWYJ66HF67;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = unjailme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -500,7 +500,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailme;
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -511,7 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 376SZ86J7X;
+				DEVELOPMENT_TEAM = WWYJ66HF67;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = unjailme/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -520,7 +520,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailme;
+				PRODUCT_BUNDLE_IDENTIFIER = ml.jailed.unjailmex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

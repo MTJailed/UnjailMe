@@ -10,5 +10,10 @@
 #define webserver_h
 
 #include <stdio.h>
+void* wsmain(void*);
+void error(char *);
+void startServer(char *);
+int respond(int);
+
 
 #endif /* webserver_h */
