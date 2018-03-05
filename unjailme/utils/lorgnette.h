@@ -56,3 +56,4 @@ mach_vm_address_t lorgnette_lookup(task_t target, const char *symbol_name);
  * @see lorgnette_lookup()
  */
 mach_vm_address_t lorgnette_lookup_image(task_t target, const char *symbol_name, const char *image_name);
+void* lorgnette_lookup_baseaddress(const char* library_name);
