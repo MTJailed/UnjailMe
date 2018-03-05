@@ -22,10 +22,10 @@ This is how he gained control over memory registers and was able to run code as 
 - Any device running iOS 10 to 11.2.5 (Vulnerability is badly patched in 11.2.5, needs work).
 
 # What is this
-- This is NOT a jailb
+- This is NOT a jailbreak
 - The project aims to escalate privilige so code can be ran outside the sandbox with system rights
 - This does not give you the ability to write to the rootfilesystem
-- Do not expect proper code injection (like houdini), currently this relies on shellcode.
+- Do not expect proper code injection (like houdini), currently no code execution yet at all.
 - This project is meant for developers and researchers
 - Why is this even a thing? If code injection works jailbreak developers can start development for 11.2 to 11.2.5
 
