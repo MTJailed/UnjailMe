@@ -1,5 +1,8 @@
 # UnjailMe
-A sandbox escape based on the proof-of-concept (CVE-2018-4087) by Rani Idan (Zimperium)
+A sandbox escape based on:
+
+- the proof-of-concept (CVE-2018-4087) by Rani Idan (Zimperium)
+- @cheesecakeufo's securityd overflow proof-of-concept (zeroday, no CVE known, thank you Abraham!)
 
 # About
 Rani used a tool from Jonathan Levine to find out what services were accessible for communication from within the sandbox.
@@ -50,7 +53,8 @@ This is how he gained control over memory registers and was able to run code as 
 # Features
 - FTP Access (sandboxed currently, unsandboxed in the future)
 - Visual PoC
-- PoC by zerodium
+- PoC by zerodium (Finally slightly imrpoved, can make call to system() function)
+- PoC by Abraham, which should be able to run arbitrary code as root, perfect for ssh.
 
 # Planned
 - Full exploit including task_for_pid for other daemons
@@ -75,14 +79,17 @@ This is how he gained control over memory registers and was able to run code as 
 - AMFI patches???
 - Entitlement injection???
 - Escalate further using private API's (BaseBoard.framework can launch processes with ASLR disabled with system rights)???
-- revive and port liblorgnette to iOS
+- revive and port liblorgnette to iOS <span style="color:green;font-weight:bold>(DONE)</span>a
+
 
 # Download ipa
 https://github.com/MTJailed/UnjailMe/releases/tag/0.1
 
 # Credits
+- Abraham (@cheesecakeufo) for his securityd zeroday
 - Vulnerability and initial PoC: Rani Idan (Zimperium) <3
 - PureFTPd
+- liblorgnette project (with my own slight improvements)
 
 
 # Donate or contribute
