@@ -67,6 +67,29 @@ mach_vm_address_t lorgnette_lookup(task_t target, const char *symbol_name)
     return lorgnette_lookup_image(target, symbol_name, NULL);
 }
 
+void* lorgnette_lookup_baseaddress(const char* library_name){
+    kern_return_t err;
+    
+    // get the list of all loaded modules from dyld
+    // the task_info mach API will get the address of the dyld all_image_info struct for the given task
+    // from which we can get the names and load addresses of all modules
+    task_dyld_info_data_t task_dyld_info;
+    mach_msg_type_number_t count = TASK_DYLD_INFO_COUNT;
+    err = task_info(mach_task_self(), TASK_DYLD_INFO, (task_info_t)&task_dyld_info, &count);
+    
+    const struct dyld_all_image_infos* all_image_infos = (const struct dyld_all_image_infos*)task_dyld_info.all_image_info_addr;
+    const struct dyld_image_info* image_infos = all_image_infos->infoArray;
+    
+    for(size_t i = 0; i < all_image_infos->infoArrayCount; i++){
+        const char* image_name = image_infos[i].imageFilePath;
+        mach_vm_address_t image_load_address = (mach_vm_address_t)image_infos[i].imageLoadAddress;
+        if (strstr(image_name, library_name)){
+            return (void*)image_load_address;
+        }
+    }
+    return NULL;
+}
+
 mach_vm_address_t lorgnette_lookup_image(task_t target, const char *symbol_name, const char *image_name)
 {
     assert(symbol_name);
