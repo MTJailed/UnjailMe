@@ -7,6 +7,7 @@
 //  Copyright © 2018 Jailed Inc. All rights reserved.
 //
 
+#import <UIKit/UIKit.h> //needed for the Ui i am working on
 #import "ViewController.h"
 #import "APIManager.h"
 #import "exploit.h"
