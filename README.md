@@ -90,7 +90,7 @@ https://github.com/MTJailed/UnjailMe/releases/tag/0.1
 - Vulnerability and initial PoC: Rani Idan (Zimperium) <3
 - PureFTPd
 - liblorgnette project (with my own slight improvements)
-
+- NEWUI by @ringarang
 
 # Donate or contribute
 - Sourcecode can be given if asked on twitter via DM (@MTJailed)
