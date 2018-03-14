@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 rodionovd. All rights reserved.
 //
 #include <mach/mach.h>
+#define CALLSYMBOL(function, ...) function(__VA_ARGS__)
+#define LC_SEGMENT_NATIVE LC_SEGMENT
+#define segment_command_native segment_command
+#define section_native section
 #pragma once
 /**
  * @abstract
@@ -56,4 +60,12 @@ mach_vm_address_t lorgnette_lookup(task_t target, const char *symbol_name);
  * @see lorgnette_lookup()
  */
 mach_vm_address_t lorgnette_lookup_image(task_t target, const char *symbol_name, const char *image_name);
-void* lorgnette_lookup_baseaddress(const char* library_name);
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
+typedef void* (*arbitrary_command)();
+#pragma clang diagnostic push
+
+addr64_t lorgnette_lookup_baseaddress(const char* library_name);
+arbitrary_command arbitrary(char* symbolname);
+arbitrary_command arbitrary_fromlib(char* symbolname, char* lib);
