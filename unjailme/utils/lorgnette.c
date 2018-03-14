@@ -67,7 +67,7 @@ mach_vm_address_t lorgnette_lookup(task_t target, const char *symbol_name)
     return lorgnette_lookup_image(target, symbol_name, NULL);
 }
 
-void* lorgnette_lookup_baseaddress(const char* library_name){
+addr64_t lorgnette_lookup_baseaddress(const char* library_name){
     kern_return_t err;
     
     // get the list of all loaded modules from dyld
@@ -84,10 +84,10 @@ void* lorgnette_lookup_baseaddress(const char* library_name){
         const char* image_name = image_infos[i].imageFilePath;
         mach_vm_address_t image_load_address = (mach_vm_address_t)image_infos[i].imageLoadAddress;
         if (strstr(image_name, library_name)){
-            return (void*)image_load_address;
+            return image_load_address;
         }
     }
-    return NULL;
+    return 0;
 }
 
 mach_vm_address_t lorgnette_lookup_image(task_t target, const char *symbol_name, const char *image_name)
@@ -503,4 +503,23 @@ static char *_copyin_string(task_t task, mach_vm_address_t pointer)
     
     char *result = strdup(buf);
     return result;
+}
+/* Create arbitrary function pointers by symbol name */
+arbitrary_command arbitrary(char* symbolname)
+{
+    mach_vm_address_t address = lorgnette_lookup(mach_task_self(), symbolname);
+    printf("Found address of %s at %#8llx\n",symbolname,address);
+    assert(address > 0);
+    arbitrary_command function;
+    *(void**)(&function) = (void*)address;
+    return function;
+}
+arbitrary_command arbitrary_fromlib(char* symbolname, char* lib)
+{
+    mach_vm_address_t address = lorgnette_lookup_image(mach_task_self(), symbolname, lib);
+    printf("Found address of %s at %#8llx\n",symbolname,address);
+    assert(address > 0);
+    arbitrary_command function;
+    *(void**)(&function) = (void*)address;
+    return function;
 }
