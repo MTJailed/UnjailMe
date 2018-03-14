@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#define documentsDirectory [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0]
 
 @interface AppDelegate ()
 
@@ -28,8 +29,60 @@
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"Application went into background\n");
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+  if (@available(iOS 11.0, *)) {
+    NSError *error = nil;
+    NSString *videoOutPath = [[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%u", arc4random() % 1000]] stringByAppendingPathExtension:@"mp4"];
+    self.assetWriter = [AVAssetWriter assetWriterWithURL:[NSURL fileURLWithPath:videoOutPath] fileType:AVFileTypeMPEG4 error:&error];
+    
+    NSDictionary *compressionProperties = @{AVVideoProfileLevelKey         : AVVideoProfileLevelH264HighAutoLevel,
+                                            AVVideoH264EntropyModeKey      : AVVideoH264EntropyModeCABAC,
+                                            AVVideoAverageBitRateKey       : @(1920 * 1080 * 11.4),
+                                            AVVideoMaxKeyFrameIntervalKey  : @60,
+                                            AVVideoAllowFrameReorderingKey : @NO};
+    
+    NSDictionary *videoSettings = @{AVVideoCompressionPropertiesKey : compressionProperties,
+                                    AVVideoCodecKey                 : AVVideoCodecTypeH264,
+                                    AVVideoWidthKey                 : @1080,
+                                    AVVideoHeightKey                : @1920};
+    
+    self.assetWriterInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
+    
+    [self.assetWriter addInput:self.assetWriterInput];
+    [self.assetWriterInput setMediaTimeScale:60];
+    [self.assetWriter setMovieTimeScale:60];
+    [self.assetWriterInput setExpectsMediaDataInRealTime:YES];
+    
+    self.screenRecorder = [RPScreenRecorder sharedRecorder];
+    
+        [self.screenRecorder startCaptureWithHandler:^(CMSampleBufferRef  _Nonnull sampleBuffer, RPSampleBufferType bufferType, NSError * _Nullable error) {
+            if (CMSampleBufferDataIsReady(sampleBuffer)) {
+                if (self.assetWriter.status == AVAssetWriterStatusUnknown) {
+                    [self.assetWriter startSessionAtSourceTime:CMSampleBufferGetPresentationTimeStamp(sampleBuffer)];
+                }
+                
+                if (self.assetWriter.status == AVAssetWriterStatusFailed) {
+                    NSLog(@"An error occured.");
+                    return;
+                }
+                
+                if (bufferType == RPSampleBufferTypeVideo) {
+                    if (self.assetWriterInput.isReadyForMoreMediaData) {
+                        [self.assetWriterInput appendSampleBuffer:sampleBuffer];
+                    }
+                }
+            }
+        } completionHandler:^(NSError * _Nullable error) {
+            if (!error) {
+                NSLog(@"Recording started successfully.");
+            }
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
+
 }
 
 
