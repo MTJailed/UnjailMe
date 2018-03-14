@@ -13,10 +13,11 @@
 #import <mach-o/ldsyms.h>
 #import "APIManager.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 @interface APIManager()
 @end
 @implementation APIManager
-
 +(BOOL)loadFW:(NSString*)name private:(BOOL)isprivate {
     if(!isprivate) {
         return [[NSBundle bundleWithPath:[NSString stringWithFormat:@"/System/Library/Frameworks/%@.framework", name]] load];
@@ -176,6 +177,7 @@
     return propertyArr;
 }
 
+
 +(id) tryCallMethod:(NSString*)ClassName methodName:(NSString*)methodName {
     Class tryClass = NSClassFromString(ClassName);
     if(tryClass != nil) {
@@ -225,4 +227,5 @@
     }
 }
 @end
+#pragma clang diagnostic pop
 
