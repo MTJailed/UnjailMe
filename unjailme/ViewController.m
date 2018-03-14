@@ -56,9 +56,14 @@
 
 
 - (IBAction)doExploit:(id)sender {
+    
     if(self.bluetoothEnabled)
     {
         [self exploit];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [sender setEnabled:NO];
+            [sender setTitle:@"Doing it..." forState:UIControlStateDisabled];
+        });
         [sender setTitle:@"Done, don't believe me? turn off bluetooth" forState:UIControlStateNormal];
         [self.consoleView setText:self.sbexploit.output];
     } else {
