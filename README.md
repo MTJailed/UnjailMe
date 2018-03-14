@@ -87,7 +87,7 @@ Making it possible to escalate to their context, escaping the sandbox.
 - AMFI patches (Not easy, we cannot gain sessions over amfi, but we can escalate using other daemons perhaps).
 - Entitlement injection (Not quite necessary, we have control over so many daemons that we don't need this).
 - Escalate further using private API's (BaseBoard.framework can launch processes with ASLR disabled with system rights)???
-- revive and port liblorgnette to iOS <span style="color:green;font-weight:bold>(DONE)</span>
+- revive and port liblorgnette to iOS <span style="color:green;font-weight:bold">(DONE)</span>
 
 # Download ipa
 https://github.com/MTJailed/UnjailMe/releases/tag/0.1
