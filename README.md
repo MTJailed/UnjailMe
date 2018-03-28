@@ -21,7 +21,7 @@ Apple has patched the vulnerabilities in iOS 11.2.5 using an arc4random() for th
 
 It seems not to be possible to gain a client's port anymore but intercepting sessions still is.
 
-It takes aproximately 15 minutes to bruteforce this arc4random() (2^32 possibilities) and therefore I am still looking forward to a final patch.
+It takes aproximately 5 days to bruteforce this arc4random() in this new patch (4.294.967.296 possibilities) and therefore I am still looking forward to a final patch as this is not considered a fix for the security issue.
 
 <img src="https://github.com/MTJailed/UnjailMe/blob/master/session_hijacking.png?raw=true" height="300">
 <i>Source: Zimperium Blog</i>
