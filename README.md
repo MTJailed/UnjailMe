@@ -40,8 +40,7 @@ Abraham's PoC shows that Abraham is trying to create an exploit for this vulnera
 It is unknown if Abraham is planning to write this exploit himself or pointing us in the right direction.
 
 # Requirements
-- For the Zimperium
-- Any device running iOS 10 to <s>11.2.5</s> 11.3 (bluetoothd is partially patched in 11.2.5, securityd isn't)
+- A 64-bit iOS device running iOS 10 up to 11.3.1
 
 # About this project
 - This project is not a jailbreak nor will contribute to one as this will only operate in userland
