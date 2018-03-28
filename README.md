@@ -13,45 +13,68 @@ By doing so he found out he could hijack the session of many daemons and could l
 
 This way he found it was possible to add a callback with additional data to the client's connection to bluetoothd.
 
-As a result we can gain control over the process counter (callback) and register x3 (additional data) of all the deamons we have a session for.
+The consequence of this is that control can be gained over the process counter (callback) and register x3 (additional data) of system deamons from which a client port (session) is intercepted.
 
-Making it possible to escalate to their context, escaping the sandbox.
+Providing the possibility to escape a sandbox app into a priviliged context making it run code with system privileges.
+
+Apple has patched the vulnerabilities in iOS 11.2.5 using an arc4random() for the session id.
+
+It seems not to be possible to gain a client's port anymore but intercepting sessions still is.
+
+It takes aproximately 15 minutes to bruteforce this arc4random() (2^32 possibilities) and therefore I am still looking forward to a final patch.
 
 <img src="https://github.com/MTJailed/UnjailMe/blob/master/session_hijacking.png?raw=true" height="300">
 <i>Source: Zimperium Blog</i>
 
+# About Abraham Masri's Poc
+As far as I know this is a bufferoverflow in the communication with securityd.
+
+This is done by providing an XPC message, which is a dictionary based value-key message, with an invalid length.
+
+The service receives the message and the underflow occurs.
+
+Abraham seems to have found a way to control many processor registers making code execution with system rights possible for apps running inside the system.
+
+Abraham's PoC shows that Abraham is trying to create an exploit for this vulnerability himself, as code exists for leaking base addresses which is known as the begin of the creation of a ROP-chain.
+
+It is unknown if Abraham is planning to write this exploit himself or pointing us in the right direction.
+
 # Requirements
+- For the Zimperium
 - Any device running iOS 10 to <s>11.2.5</s> 11.3 (bluetoothd is partially patched in 11.2.5, securityd isn't)
 
-# What is this
-- This is NOT a jailbreak
-- The project has as goal to escalate privilige so code can be ran outside the sandbox with system rights.
-- This does not give you the ability to write to the rootfilesystem, as for such you need kernel priviliges.
-- Do not expect proper code injection (like houdini), currently no code execution is possible until a ropchain is written.
-- This project is meant for developers and researchers, and contains useful code for further userland projects.
-- Why is this even a thing? If code injection works jailbreak developers can start development for 11.2 to <s>11.2.5</s> 11.3.
+# About this project
+- This project is not a jailbreak nor will contribute to one as this will only operate in userland
+- This project can not and never will gain the ability to write to the rootfilesystem as this is mounted as readonly as enforced by the kernel.
+- This project will not easily allow arbitrary code execution in the form of dynamic libraries like cydia substrate does.
+- The project has as main goal to escallate an sandboxed container app to system rights.
+- AMFI enforces that all binaries are validly signed and this project cannot patch AMFI.
+- The project aims to gain read and write permission to the userdata partition (/var/root, /var/mobile).
+- The project aims to gain access to the protected key chain storage for credential recovery and forensic purposes.
+- The project also aims to provide server functionality for running code as root and file transfer.
+- The project was intended to be a help for developers and researchers for contribution.
+- The project will make it easier for jailbreak developers and security researchers to find bugs in kernel drivers that are only accessible from within a privilige context or userland bugs using fuzzing techniques.
+- The project will make it easier for jailbreak tweak developers to research the new iOS 11 features and debug tweak development on a live device.
+- This project has the main focus to work for iOS 10 up to 11.2.5 but can in theory support 11.2.5 up to including 11.3 as well when exploits are developed.
+
 
 # Screenshot
 <img src="https://github.com/MTJailed/UnjailMe/blob/master/b.png?raw=true" height="300"/>
 
 # How to use the app
-- Run the app
-- Turn on bluetooth
-- Click escape sandbox
-- Wait until it completes. This can take around 10 minutes.
-- In the output you should see FTP credentials that you can use to transfer files.
-- Use FileZilla to connect to your iphone and browse files.
-- For convenience the path to the appcontainer is shown as the FTP server runs currently inside the sandbox.
-- The FTP server has currently nothing to do with the exploit, it was written and compiled by me to be a part of MTJailed.
-- The FTP server is based on pureftpd.
-- The FTP server can eventually be used to transfer files for code injection, download logs, apticket etcetera.
-- <s>Sometimes the exploit also gains a session for SpringBoard so turning bluetooth off again might cause a respring.</s>
+- The app does not add any value to the project but serves as a visual to those asking for it (A lot of hyped-up people from the community asked for this)
+- The app will dump information from libraries and frameworks including memory, mach-o information and it's base addresses which is useful for ROP-development.
+- The logic in the app can take up to 15 minutes to complete due to the many parsing and prints, this will not be the case in final releases.
+- The app will not add any value to your iphone or change the behaviour of the software as it is, some daemons may crash but no permanent damage is done to the system.
+- It is recommended for researchers to run this project in Xcode instead
 
 
 # TROUBLESHOOT (not needed, but just in case)
 - Delete the app
 - Turn off bluetooth
 - Reboot
+- Turn on bluetooth
+- Turn off bluetooth
 
 # Features
 - FTP Access (sandboxed currently, unsandboxed in the future)
@@ -61,8 +84,8 @@ Making it possible to escalate to their context, escaping the sandbox.
 - PoC by Sem Voigtlander (Kernel address space allocation DoS, for reboot device function).
 
 # Planned
-- Full exploit including task_for_pid for other daemons.
-- Remote SSH shell access (dropbear).
+- Full exploit including gaining full control over other daemons their address space.
+- Remote SSH shell access (dropbear or a derative).
 
 # Future things to think about
 - SpringBoardd code injection (Hello there jailbreak lovers)
